@@ -28,6 +28,22 @@ It calculates study workload based on exam dates, number of chapters, and diffic
 
 ---
 
+## 📸 Screenshots
+
+### Home Page
+![Home](home.png)
+
+### Subject Entry
+![Input](input-page.png)
+
+### Study Plan
+![Study Plan](study-plan.png)
+
+### Dashboard Chart
+![Chart](dashboard-chart.png)
+
+---
+
 ## How It Works
 
 - Users input subject details
