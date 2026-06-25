@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySync</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<div id="loader">
+   📚 Loading StudySync...
+</div>
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+
+    <div class="card center">
+
+        <h1>📚 StudySync</h1>
+
+        <p>
+            Smart Exam Planning Made Easy
+        </p>
+
+        <p class="quote">
+            "Plan Smart. Study Better."
+        </p>
+
+        <button onclick="showPage(2)">
+            Start Planning
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+    <div class="card">
+
+        <h2>Add Subject</h2>
+
+        <input
+            type="text"
+            id="subject"
+            placeholder="Subject Name">
+
+        <input
+            type="date"
+            id="examDate">
+
+        <input
+            type="number"
+            id="chapters"
+            placeholder="Total Chapters">
+
+        <select id="difficulty">
+
+            <option value="Easy">
+                Easy
+            </option>
+
+            <option value="Medium">
+                Medium
+            </option>
+
+            <option value="Hard">
+                Hard
+            </option>
+
+        </select>
+
+        <button onclick="addSubject()">
+            Add Subject
+        </button>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Subject</th>
+                    <th>Exam</th>
+                    <th>Chapters</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="subjectTable">
+
+            </tbody>
+
+        </table>
+
+        <button onclick="generatePlan()">
+            Generate Study Plan
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+    <div class="card">
+
+        <h2>Your Study Plan</h2>
+
+        <div id="summary"></div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Subject</th>
+                    <th>Days</th>
+                    <th>Ch/Day</th>
+                    <th>Hours</th>
+                    <th>Priority</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="resultTable">
+
+            </tbody>
+
+        </table>
+
+        <canvas id="studyChart"></canvas>
+
+        <button onclick="location.reload()">
+            Restart
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
